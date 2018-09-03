@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 
+import { Row, Input, Button } from 'react-materialize'
+
 export default class Loading extends Component {
   constructor(props) {
     super(props);
@@ -23,8 +25,11 @@ export default class Loading extends Component {
 
     return (
       <div>
-          <h1>Login</h1>
-          <button onClick={this._login}>Login</button>
+          <Row>
+              <Input type="email" label="Email" s={12} />
+              <Input type="password" label="password" s={12} />
+          </Row>
+          <Button waves='light' onClick={this._login}>Login</Button>
       </div>
     );
   }

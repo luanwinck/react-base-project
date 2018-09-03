@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 
+import { Button } from 'react-materialize'
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +26,7 @@ export default class Home extends Component {
     return (
       <div>
           <h1>Home</h1>
-          <button onClick={this._logout}>Logout</button>
+          <Button waves='light' className="red" onClick={this._logout}>Logout</Button>
       </div>
     );
   }
